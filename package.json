@@ -1,0 +1,7 @@
+{
+  "name": "currency_scanner",
+  "private": true,
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}

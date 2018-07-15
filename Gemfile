@@ -18,6 +18,7 @@ gem 'uglifier', '>= 1.3.0'
 
 # views
 gem 'active_link_to'
+gem 'metamagic'
 gem 'simple_form'
 gem 'slim'
 

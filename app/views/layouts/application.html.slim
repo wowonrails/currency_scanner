@@ -1,0 +1,22 @@
+doctype html
+html lang='en'
+
+  head
+    meta charset='utf-8'
+    meta name='viewport' content='width=device-width, initial-scale=1.0'
+    meta name='robots' content='NOODP,NOYDIR'
+
+    = metamagic site: 'CurrencyScanner', title: %i[title site], separator: ' - '
+    = csrf_meta_tags
+    = stylesheet_link_tag :application
+
+  body cz-shortcut-listen='true'
+    = render 'header'
+
+    main.container.mt-5.pt-5 role='main'
+      = yield
+
+    = render 'footer'
+
+    = javascript_include_tag :application
+    = content_for :javascript

@@ -1,0 +1,13 @@
+= link_to 'CurrencyScanner', root_path, class: 'navbar-brand'
+
+button.navbar-toggler aria-controls='navbarCollapse' aria-expanded='false' aria-label=('Toggle navigation') data-target='#navbarCollapse' data-toggle='collapse' type='button'
+  span.navbar-toggler-icon
+
+#navbarCollapse.collapse.navbar-collapse
+  ul.navbar-nav.mr-auto
+  .mt-2.mt-md-0
+    - if admin_signed_in?
+      = link_to "Sign out", destroy_admin_session_path, class: 'btn btn-outline-success my-2 my-sm-0'
+
+    - else
+      = link_to "Sign in", new_admin_session_path, class: 'btn btn-outline-success my-2 my-sm-0'

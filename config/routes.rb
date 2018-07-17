@@ -3,12 +3,10 @@ Rails.application.routes.draw do
 
   root 'rates#show'
 
-  authenticated :admin do
-    namespace :admin do
-      root 'rates#new'
+  namespace :admin do
+    root 'rates#new'
 
-      resources :rates, only: %w[show new create]
-    end
+    resources :rates, only: %w[new create]
   end
 
   resources :rates, only: :show

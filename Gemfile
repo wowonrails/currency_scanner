@@ -31,6 +31,7 @@ gem 'decent_decoration'
 gem 'decent_exposure'
 gem 'devise'
 gem 'draper'
+gem 'faraday'
 gem 'interactor'
 gem 'kaminari'
 gem 'pundit'
@@ -38,6 +39,8 @@ gem 'responders'
 gem 'rollbar'
 gem 'seedbank'
 gem 'whenever', require: false
+gem 'dry-types'
+gem 'dry-struct'
 
 group :test do
   gem 'capybara'

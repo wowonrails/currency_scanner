@@ -1,3 +1,7 @@
-class Admin::Base < ApplicationController
-  before_action :authenticate_user!
+class Admin::BaseController < ApplicationController
+  before_action :authenticate_admin!
+
+  def pundit_user
+    Admin.find(current_admin.id)
+  end
 end

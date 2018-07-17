@@ -1,0 +1,26 @@
+h1.h3.mb-3.font-weight-normal.text-center
+  | Enter the Value of the Dollar Rate
+  br
+  | and the Expiry Date
+
+.d-flex.justify-content-center
+  = simple_form_for rate,
+    url: admin_rates_path,
+    html: { class: 'form-inline' } do |f|
+
+    .form-group
+      = f.input :value,
+        required: false,
+        autofocus: true,
+        label: false,
+        placeholder: 'Enter value',
+        class: 'form-control'
+
+    .form-group
+      = f.input :expires_at,
+        required: false,
+        label: false,
+        class: 'form-control'
+
+    .form-group
+      = f.button :submit, 'Save', class: 'btn btn-primary'

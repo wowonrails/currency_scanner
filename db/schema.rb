@@ -34,15 +34,16 @@ ActiveRecord::Schema.define(version: 20180715105614) do
   end
 
   create_table "rates", force: :cascade do |t|
-    t.integer "currency_id"
+    t.bigint "currency_id"
     t.date "date_at"
     t.float "value"
     t.datetime "expires_at"
     t.boolean "forced", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["currency_id"], name: "index_rates_on_currency_id", unique: true
+    t.index ["currency_id"], name: "index_rates_on_currency_id"
     t.index ["expires_at"], name: "index_rates_on_expires_at"
   end
 
+  add_foreign_key "rates", "currencies"
 end

@@ -3,7 +3,7 @@ class Admin::RatesController < Admin::BaseController
 
   def new
     authorize(current_admin)
-    self.rate = Rate.new(Rate.not_expired.last.attributes)
+    self.rate = Rate.new(Rate.not_expired.last&.attributes)
   end
 
   def create

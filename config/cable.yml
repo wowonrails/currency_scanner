@@ -1,10 +1,10 @@
-development:
-  adapter: async
+redis: &redis
+  adapter: redis
+  url: redis://localhost:6379/1
 
-test:
-  adapter: async
+development: *redis
+test: *redis
 
 production:
   adapter: redis
-  url: redis://localhost:6379/1
-  channel_prefix: currency_scanner_production
+  url: <%= ENV["REDISCLOUD_URL"] %>

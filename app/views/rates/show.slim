@@ -1,5 +1,5 @@
 h1.text-center
   span.badge.badge-info.text-center.ml-2
     | 1$ =
-    =<> number_to_currency(rate.present? ? rate.value : 0, locale: :ru)
-
+    span#rate-container
+      =<> number_to_currency(rate.present? ? rate.value : 0, locale: :ru)

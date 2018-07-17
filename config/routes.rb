@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   end
 
   resources :rates, only: :show
+
+  mount ActionCable.server => '/cable'
 end

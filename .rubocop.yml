@@ -4,13 +4,15 @@ Rails:
   Enabled: true
 
 AllCops:
-  TargetRubyVersion: 2.4
+  TargetRubyVersion: 2.5
   DisplayCopNames: true
   Exclude:
     - bin/**/*
     - db/**/*
     - vendor/**/*
     - lib/templates/**/*
+    - config/**/*
+    - test/**/*
 
 Rails/HasAndBelongsToMany:
   Enabled: false
@@ -67,6 +69,9 @@ Style/FrozenStringLiteralComment:
 Style/StringMethods:
   Enabled: true
 
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+
 Metrics/LineLength:
   Max: 120
 
@@ -78,3 +83,6 @@ Layout/EndAlignment:
   SupportedStylesAlignWith:
     - keyword
     - variable
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented

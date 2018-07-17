@@ -31,6 +31,8 @@ gem 'decent_decoration'
 gem 'decent_exposure'
 gem 'devise'
 gem 'draper'
+gem 'dry-struct'
+gem 'dry-types'
 gem 'faraday'
 gem 'interactor'
 gem 'kaminari'
@@ -39,8 +41,6 @@ gem 'responders'
 gem 'rollbar'
 gem 'seedbank'
 gem 'whenever', require: false
-gem 'dry-types'
-gem 'dry-struct'
 
 group :test do
   gem 'capybara'
@@ -82,4 +82,3 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'
 end
-

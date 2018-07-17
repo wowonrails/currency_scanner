@@ -28,7 +28,7 @@ class SyncDollarRate < ApplicationService
   end
 
   def rate_update
-    last_rate.update_column(:value, sbr_response.valute[:usd]['Value'])
+    last_rate.update(value: sbr_response.valute[:usd]['Value'])
   end
 
   def rate_create

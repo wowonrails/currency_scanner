@@ -20,7 +20,7 @@ class Admin::RatesController < Admin::BaseController
   def custom_rate_params
     rate_params.merge(
       currency_id: Currency.find_by(name: 'USD').id,
-      date_at: Date.today,
+      date_at: Time.zone.today,
       forced: true
     )
   end

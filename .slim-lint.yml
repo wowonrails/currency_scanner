@@ -24,7 +24,9 @@ linters:
     # templates isn't well-formatted, so we ignore them.
     ignored_cops:
       - Lint/BlockAlignment
+      - Layout/AlignParameters
       - Layout/EndAlignment
+      - Layout/IndentationWidth
       - Lint/Void
       - Metrics/LineLength
       - Style/AlignHash

@@ -1,8 +1,9 @@
 FactoryBot.define do
   factory :rate do
-    currency_id ''
-    date_at ''
-    value ''
-    expires_at '2018-07-15 13:56:14'
+    currency
+    date_at { Time.zone.today }
+    value 6.5
+    expires_at { Faker::Time.forward(1, :morning) }
+    forced true
   end
 end

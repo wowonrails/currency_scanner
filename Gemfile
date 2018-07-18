@@ -44,12 +44,14 @@ gem 'whenever', require: false
 
 group :test do
   gem 'capybara'
+  gem 'capybara-screenshot'
   gem 'codeclimate-test-reporter', '~> 1.0.0'
   gem 'database_cleaner'
   gem 'email_spec'
   gem 'formulaic'
   gem 'launchy'
   gem 'poltergeist'
+  gem 'pundit-matchers'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers'
   gem 'webmock', require: false

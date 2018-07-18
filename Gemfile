@@ -45,7 +45,7 @@ gem 'whenever', require: false
 group :test do
   gem 'capybara'
   gem 'capybara-screenshot'
-  gem 'codeclimate-test-reporter', '~> 1.0.0'
+  gem 'codeclimate-test-reporter', require: nil
   gem 'database_cleaner'
   gem 'email_spec'
   gem 'formulaic'

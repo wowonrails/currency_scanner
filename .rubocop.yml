@@ -86,3 +86,6 @@ Layout/EndAlignment:
 
 Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
+
+Capybara/FeatureMethods:
+  Enabled: false

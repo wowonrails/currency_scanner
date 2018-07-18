@@ -28,5 +28,14 @@ exclude_paths:
 - bin/
 - config/
 - db/
-- spec/
-- lib/
+- dist/
+- features/
+- "**/node_modules/"
+- script/
+- "**/spec/"
+- "**/test/"
+- "**/tests/"
+- Tests/"
+- "**/vendor/"
+- "**/*_test.go"
+- "**/*.d.ts"

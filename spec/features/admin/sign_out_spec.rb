@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature 'Sign Out' do
-  include_context 'current admin signed in'
+  include_context 'when current admin signed in'
 
   scenario 'User signs out' do
     visit '/'

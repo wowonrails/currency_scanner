@@ -1,4 +1,4 @@
-shared_context 'current admin signed in' do
+shared_context 'when current admin signed in' do
   let(:current_admin) { create :admin }
 
   background do

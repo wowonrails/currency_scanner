@@ -2,6 +2,7 @@ ENV['RAILS_ENV'] ||= 'test'
 
 require 'spec_helper'
 require File.expand_path('../config/environment', __dir__)
+require 'action_cable/testing/rspec'
 require 'rspec/rails'
 require 'shoulda/matchers'
 

@@ -44,6 +44,7 @@ gem 'rollbar'
 gem 'seedbank'
 
 group :test do
+  gem 'action-cable-testing'
   gem 'capybara'
   gem 'capybara-screenshot'
   gem 'codeclimate-test-reporter', require: nil

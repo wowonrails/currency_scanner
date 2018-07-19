@@ -5,7 +5,7 @@ class UsdRateSynchronizer
   end
 
   def call
-    @sbr_response = Cbr::Response.new(@request.call)
+    @sbr_response = Cbr::Response.new(@request.response)
 
     return rate_update_and_broadcast if rate.present?
     rate_create_and_broadcast

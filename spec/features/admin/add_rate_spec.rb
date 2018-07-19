@@ -17,6 +17,6 @@ feature 'Add Rate' do
 
     click_on(submit(:rate, :create))
 
-    expect(page).to have_content('1$ = ₽ 55.56')
+    expect(page).to have_content('1$ = 55.56 ₽')
   end
 end

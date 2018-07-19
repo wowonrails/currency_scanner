@@ -7,6 +7,6 @@ feature 'Landing' do
     visit root_path
 
     expect(page).to have_content('CurrencyScanner')
-    expect(page).to have_content("1$ = ₽ #{rate.value}")
+    expect(page).to have_content("1$ = #{rate.value} ₽")
   end
 end

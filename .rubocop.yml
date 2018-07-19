@@ -12,7 +12,6 @@ AllCops:
     - vendor/**/*
     - lib/templates/**/*
     - config/**/*
-    - test/**/*
 
 Rails/HasAndBelongsToMany:
   Enabled: false
@@ -37,9 +36,6 @@ Style/AndOr:
 
 Style/Documentation:
   Enabled: false
-
-Style/MethodCalledOnDoEndBlock:
-  Enabled: true
 
 Style/CollectionMethods:
   Enabled: true
@@ -88,4 +84,7 @@ Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
 
 Capybara/FeatureMethods:
+  Enabled: false
+
+Style/BlockDelimiters:
   Enabled: false

@@ -8,7 +8,7 @@ class Cbr::Request
     end
   end
 
-  def call
+  def response
     @connection.get(URL).body
   end
 end

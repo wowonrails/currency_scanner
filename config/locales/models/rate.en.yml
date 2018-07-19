@@ -1,0 +1,9 @@
+en:
+  simple_form:
+    placeholders:
+      rate:
+        value: Enter value
+  helpers:
+    submit:
+      rate:
+        create: Save

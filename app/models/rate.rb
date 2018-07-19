@@ -3,7 +3,11 @@ class Rate < ApplicationRecord
 
   validates :currency, :date_at, :value, :expires_at, presence: true
 
-  scope :forced,      (-> { where(forced: true) })
-  scope :real,        (-> { where(forced: false) })
-  scope :not_expired, (-> { forced.where('expires_at > ?', Time.zone.now) })
+  scope :forced, -> { where(forced: true) }
+  scope :non_forced, -> { where(forced: false) }
+
+  def self.build_from(rate)
+    return new if rate.blank?
+    new(rate.attributes)
+  end
 end

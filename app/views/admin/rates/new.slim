@@ -1,24 +1,24 @@
-h1.h3.mb-3.font-weight-normal.text-center
-  | Enter the Value of the Dollar Rate
-  br
-  | and the Expiry Date
+article
+  h1.h3.mb-3.font-weight-normal.text-center
+    | Enter the Value of the Dollar Rate
+    br
+    | and the Expiry Date
 
-.d-flex.justify-content-center
-  = simple_form_for rate,
-    url: admin_rates_path do |f|
+  .d-flex.justify-content-center
+    = simple_form_for rate,
+      url: admin_rates_path do |f|
 
-    .form-group
-      = f.input :value,
-        required: false,
-        autofocus: true,
-        placeholder: 'Enter value',
-        class: 'form-control'
+      .form-group
+        = f.input :value,
+          required: false,
+          autofocus: true,
+          class: 'form-control'
 
-    .form-group
-      = f.input :expires_at,
-        as: :datetimepicker,
-        required: false,
-        class: 'form-control'
+      .form-group
+        = f.input :expires_at,
+          as: :datetimepicker,
+          required: false,
+          class: 'form-control'
 
-    .form-group
-      = f.button :submit, 'Save', class: 'btn btn-primary'
+      .form-group
+        = f.button :submit, class: 'btn btn-primary'

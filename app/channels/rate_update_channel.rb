@@ -4,12 +4,12 @@ class RateUpdateChannel < ApplicationCable::Channel
   end
 
   def update_value
-    ActionCable.server.broadcast 'rate_update_channel', rate_value: rate&.value&.round(2)
+    ActionCable.server.broadcast 'rate_update_channel', rate_value: rate.value
   end
 
   private
 
   def rate
-    Rate.not_expired.last || Rate.real.last
+    PublicRatesQuery.last || NullRate.new
   end
 end

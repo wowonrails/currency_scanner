@@ -1,5 +1,5 @@
 namespace :cbr do
   task sync: :environment do
-    SyncDollarRate.call
+    UsdRateSynchronizer.new.call
   end
 end

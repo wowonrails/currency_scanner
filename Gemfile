@@ -27,7 +27,6 @@ gem 'slim'
 
 # Background jobs
 gem 'redis', '~> 4.0'
-gem 'sidekiq'
 
 # all other gems
 gem 'decent_decoration'
@@ -37,13 +36,12 @@ gem 'draper'
 gem 'dry-struct'
 gem 'dry-types'
 gem 'faraday'
+gem 'faraday_middleware'
 gem 'interactor'
 gem 'kaminari'
-gem 'pundit'
 gem 'responders'
 gem 'rollbar'
 gem 'seedbank'
-gem 'whenever', require: false
 
 group :test do
   gem 'capybara'

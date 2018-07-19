@@ -5,20 +5,17 @@ feature 'Add Rate' do
 
   let!(:rate) { create :rate }
 
-  scenario 'Admin creates rate' do
-    visit root_path
-
-    expect(page).to have_content("1$ = ₽ #{rate.value}")
-
-    click_link 'Create Rate'
+  scenario 'Admin observes last rate values and creates rate' do
+    visit admin_root_path
 
     expect(page).to have_content('Enter the Value of the Dollar Rateand the Expiry Date')
-    expect(find_field('rate[value]').value).to      eq(rate.value.to_s)
-    expect(find_field('rate[expires_at]').value).to eq(rate.expires_at.strftime('%d-%m-%Y %H:%M'))
+    expect(page).to have_field('rate[value]', with: rate.value)
+    expect(page).to have_field('rate[expires_at]', with: rate.expires_at.strftime('%d-%m-%Y %H:%M'))
 
     fill_in 'Value',            with: '55.5555'
     fill_in 'rate[expires_at]', with: 15.minutes.from_now
-    click_button 'Save'
+
+    click_on(submit(:rate, :create))
 
     expect(page).to have_content('1$ = ₽ 55.56')
   end

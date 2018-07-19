@@ -1,5 +1,5 @@
 class RatesController < ApplicationController
-  expose(:rate) { Rate.not_expired.last || Rate.real.last }
+  expose(:rate) { PublicRatesQuery.last || NullRate.new }
 
   def show
   end

@@ -6,3 +6,4 @@
 #= require cable
 #= require tempusdominus-bootstrap-4.js
 #= require_tree ./custom
+#= require_tree ./utils

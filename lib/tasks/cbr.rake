@@ -1,5 +1,6 @@
-namespace :cbr do
-  task sync: :environment do
+namespace :sync do
+  desc 'Update the dollar rate'
+  task cbr: :environment do
     UsdRateSynchronizer.new.call
   end
 end

@@ -43,8 +43,8 @@ Rails.application.configure do
   # config.action_cable.mount_path = nil
   config.action_cable.url = 'wss://sitepoint-actioncable.herokuapp.com/cable'
   config.action_cable.allowed_request_origins = [
-    'https://currency_scanner.herokuapp.com',
-    'http://currency_scanner.herokuapp.com'
+    'https://currency-scanner.herokuapp.com',
+    'http://currency-scanner.herokuapp.com'
   ]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.

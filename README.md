@@ -29,4 +29,4 @@ bin/rails s
 
 ## Production
 
-* https://currency_scanner.herokuapp.com/
+* https://currency-scanner.herokuapp.com/

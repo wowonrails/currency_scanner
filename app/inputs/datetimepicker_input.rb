@@ -8,7 +8,8 @@ class DatetimepickerInput < SimpleForm::Inputs::Base
   def input_html_options
     super.merge(
       data: { target: "##{attribute_name}" },
-      value: format_value(object.public_send(attribute_name))
+      value: format_value(object.public_send(attribute_name)),
+      html5: true
     )
   end
 

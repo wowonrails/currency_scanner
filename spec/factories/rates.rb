@@ -1,9 +1,9 @@
 FactoryBot.define do
   factory :rate do
-    currency
+    association :currency, factory: :currency, strategy: :build
     date_at { Time.zone.today }
-    value 6.5
-    expires_at { Faker::Time.forward(1, :morning) }
+    value 6.55
+    expires_at { 10.minutes.from_now }
     forced true
   end
 end

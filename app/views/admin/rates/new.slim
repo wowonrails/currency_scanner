@@ -5,21 +5,19 @@ h1.h3.mb-3.font-weight-normal.text-center
 
 .d-flex.justify-content-center
   = simple_form_for rate,
-    url: admin_rates_path,
-    html: { class: 'form-inline' } do |f|
+    url: admin_rates_path do |f|
 
     .form-group
       = f.input :value,
         required: false,
         autofocus: true,
-        label: false,
         placeholder: 'Enter value',
         class: 'form-control'
 
     .form-group
       = f.input :expires_at,
+        as: :datetimepicker,
         required: false,
-        label: false,
         class: 'form-control'
 
     .form-group

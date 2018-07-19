@@ -11,8 +11,11 @@ gem 'puma', '~> 3.7'
 
 # assets
 gem 'bootstrap', '~> 4.1.1'
+gem 'bootstrap4-datetime-picker-rails'
 gem 'coffee-rails', '~> 4.2'
+gem 'font-awesome-rails'
 gem 'jquery-rails'
+gem 'momentjs-rails'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 
